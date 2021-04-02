@@ -3,7 +3,7 @@ Analyze RxNorm Data
 
 Table of content
 - [Task](#task)  
-- [What is RxNorm](#whatisrxnorm)  
+- [What is RxNorm](#what_is_rxnorm)  
 
 ## Task
 I plan to get the data from RxNorm and analyze it. Then I will try to use some AI or ML on it.
