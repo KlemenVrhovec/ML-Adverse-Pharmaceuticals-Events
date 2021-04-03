@@ -42,9 +42,30 @@ What medical conditions are most at risk to drug-associated risks?
 
 ## Data access
 
-Data can be accessed [here](https://datadryad.org/stash/dataset/doi:10.5061/dryad.8q0s4) as it said on kaggle.
-The data is from 2017. 
 
+Data can be accessed on [AEOLUS](https://datadryad.org/stash/dataset/doi:10.5061/dryad.8q0s4) as it said on kaggle.
+The data is from 2015. 
+
+#### Summary of artice
+In the article is already prepared data for downloading and also code so I will be able to update data 
+to the latest version and do cleanup steps.
+
+Data on FDA's webside is updarted quarterly in CSV or XML format.
+
+Data starts from 2004. From 2004 to 2012 there is different format (Legacy AERS data) as from 2012 on (Curent AERS data). 
+It the time of above article the data was till 2015. The main difference is in renaming of key fields: "isr" and "case"
+to primaryid and caseid respectivly.
+
+
+![](imgs/AEOLUS_database.png)
+
+You need to download and extract each quarterly FEARS/LEARS data file and then impute missing values and 
+delete duplicates. The data is then devided in 7 tables as shown in the image belowe.
+
+![](imgs/AEOLUS_tables.png)
+
+NEXT
+[ ] Data merging page 3/11
 
 # TO DO
 - [ ] Read the article of this data https://datadryad.org/stash/dataset/doi:10.5061/dryad.8q0s4
