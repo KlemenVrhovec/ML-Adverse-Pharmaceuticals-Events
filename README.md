@@ -1,52 +1,52 @@
-# ML-Adverse-Pharmaceuticals-Events
-Analyze RxNorm Data
+# ML-Adverse Pharmaceuticals Events
+Analyze Adverse Pharmaceuticals Events
 
 Table of content
 - [Task](#task)  
-- [What is RxNorm](#what-is-rxnorm)  
+- [Keggle](#keggle)  
 
 ## Task
-I plan to get the data from RxNorm and analyze it. Then I will try to use some AI or ML on it.
+Find which drugs cause Advers Pharmaceutical events
+Still need to be determent more exactly
 
 Tasks
 
-- [ ] What is RxNorm
+- [ ] Where is data
+- [ ] How to access data
+- [ ] Exploratory Data analysis (Check what can I predict, where ML can be used)
 
-## What is RxNorm
-RxNorm is a name of a US-specific terminology in medicine that contains all medications available on US market.
- Source: [wiki](https://en.wikipedia.org/wiki/RxNorm)
- 
- RxNorm provides normalized names for clinical drugs and links its names to many of the drug vocabularies 
- commonly used in pharmacy management and drug interaction software, including those of First Databank,
-  Micromedex, and Gold Standard Drug Database. By providing links between these vocabularies,
-   RxNorm can mediate messages between systems not using the same software and vocabulary. 
-   Source: [Official RxNorm site](https://www.nlm.nih.gov/research/umls/rxnorm/index.html)
+## Keggle
+sorce: https://www.kaggle.com/fda/adverse-pharmaceuticals-events
 
-## Content
-source: [kaggle](https://www.kaggle.com/nlm-nih/nlm-rxnorm)
+### Context:
+Identification of adverse drug reactions (ADRs) during the post-marketing phase is one of the most important goals of drug safety surveillance. Spontaneous reporting systems (SRS) data, which are the mainstay of traditional drug safety surveillance, are used for hypothesis generation and to validate the newer approaches. The publicly available US Food and Drug Administration (FDA) Adverse Event Reporting System (FAERS) data requires substantial curation before they can be used appropriately, and applying different strategies for data cleaning and normalization can have material impact on analysis results.
 
-RxNorm was created by the U.S. National Library of Medicine (NLM) to provide a normalized naming system for clinical drugs, defined as the combination of {ingredient + strength + dose form}. In addition to the naming system, the RxNorm dataset also provides structured information such as brand names, ingredients, drug classes, and so on, for each clinical drug. Typical uses of RxNorm include navigating between names and codes among different drug vocabularies and using information in RxNorm to assist with health information exchange/medication reconciliation, e-prescribing, drug analytics, formulary development, and other functions.
+### Content:
+We provide a curated and standardized version of FAERS removing duplicate case records, applying standardized vocabularies with drug names mapped to RxNorm concepts and outcomes mapped to SNOMED-CT concepts, and pre-computed summary statistics about drug-outcome relationships for general consumption. This publicly available resource, along with the source code, will accelerate drug safety research by reducing the amount of time spent performing data management on the source FAERS reports, improving the quality of the underlying data, and enabling standardized analyses using common vocabularies.
 
-This public dataset includes multiple data files originally released in RxNorm Rich Release Format (RXNRRF) that are loaded into Bigquery tables. The data is updated and archived on a monthly basis.
+### Acknowledgements:
+Data available from [this source](http://datadryad.org/resource/doi:10.5061/dryad.8q0s4).
 
-The following tables are included in the RxNorm dataset:
+When using this data, please cite the original publication:
 
-- RXNCONSO contains concept and source information
+Banda JM, Evans L, Vanguri RS, Tatonetti NP, Ryan PB, Shah NH (2016) A curated and standardized adverse drug event resource to accelerate drug safety research. Scientific Data 3: 160026. http://dx.doi.org/10.1038/sdata.2016.26
 
-- RXNREL contains information regarding relationships between entities
+Additionally, please cite the Dryad data package:
 
-- RXNSAT contains attribute information
+Banda JM, Evans L, Vanguri RS, Tatonetti NP, Ryan PB, Shah NH (2016) Data from: A curated and standardized adverse drug event resource to accelerate drug safety research. Dryad Digital Repository. http://dx.doi.org/10.5061/dryad.8q0s4
 
-- RXNSTY contains semantic information
+### Inspiration:
+This is a large-ish dataset (~4.5 gb uncompressed), so try out your batch processing skills in a Kernel
+What groups of drugs are most risky?
+What medical conditions are most at risk to drug-associated risks?
 
-- RXNSAB contains source info
+## Data access
 
-- RXNCUI contains retired rxcui codes
+Data can be accessed [here](https://datadryad.org/stash/dataset/doi:10.5061/dryad.8q0s4) as it said on kaggle.
+The data is from 2017. 
 
-- RXNATOMARCHIVE contains archived data
 
-- RXNCUICHANGES contains concept changes
-
-Update Frequency: Monthly
-
-Fork this kernel to get started with this dataset.
+# TO DO
+- [ ] Read the article of this data https://datadryad.org/stash/dataset/doi:10.5061/dryad.8q0s4
+- [ ] Check [FAERS](https://open.fda.gov/data/faers/#:~:text=About%20FAERS-,The%20FDA%20Adverse%20Event%20Reporting%20System%20(FAERS)%20is%20a%20database,drug%20and%20therapeutic%20biologic%20products.)
+official site for new version of data
